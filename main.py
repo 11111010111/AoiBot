@@ -29,7 +29,7 @@ async def say(ctx, *, argname='** **'):
 
 
 @bot.command(name='hug', help='pretty obvious i think')
-async def hug(ctx, *, argname='** **'):
+async def hug(ctx, *, argname='themself'):
     response = f'<@{ctx.author.id}> hugs {argname}'
     await ctx.send(response)
 
