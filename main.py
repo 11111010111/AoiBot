@@ -33,9 +33,9 @@ async def kiss(ctx, *, argname=''):
     if argname == '':
         argname = ctx.author.nick
     if argname == '<@!879069038695817216>':
-        response = f"<@{ctx.author.id}> hugs me! ^w^"
+        response = f"{ctx.author.mention} hugs me! ^w^"
     else:
-        response = f"<@{ctx.author.id}> hugs {argname}!"
+        response = f"{ctx.author.mention} hugs {argname}!"
     print(f"Author: {ctx.author}, Command: hug, Response: {response}")
     await ctx.send(response)
 
@@ -45,9 +45,9 @@ async def kiss(ctx, *, argname=''):
     if argname == '':
         argname = ctx.author.nick
     if argname == '<@!879069038695817216>':
-        response = f"<@{ctx.author.id}> kisses me :flushed:"
+        response = f"{ctx.author.mention} kisses me :flushed:"
     else:
-        response = f"<@{ctx.author.id}> kisses {argname}!"
+        response = f"{ctx.author.mention} kisses {argname}!"
     print(f"Author: {ctx.author}, Command: kiss, Response: {response}")
     await ctx.send(response)
 
@@ -57,9 +57,9 @@ async def kiss(ctx, *, argname=''):
     if argname == '':
         argname = ctx.author.nick
     if argname == '<@!879069038695817216>':
-        response = f"<@{ctx.author.id}> boops my snoot! >~<"
+        response = f"{ctx.author.mention} boops my snoot! >~<"
     else:
-        response = f"<@{ctx.author.id}> boops {argname}'s snoot!"
+        response = f"{ctx.author.mention} boops {argname}'s snoot!"
     print(f"Author: {ctx.author}, Command: boop, Response: {response}")
     await ctx.send(response)
 
@@ -69,9 +69,9 @@ async def kiss(ctx, *, argname=''):
     if argname == '':
         argname = ctx.author.nick
     if argname == '<@!879069038695817216>':
-        response = f"<@{ctx.author.id}> pets me! ^w^"
+        response = f"{ctx.author.mention} pets me! ^w^"
     else:
-        response = f"<@{ctx.author.id}> pets {argname}!"
+        response = f"{ctx.author.mention} pets {argname}!"
     print(f"Author: {ctx.author}, Command: pet, Response: {response}")
     await ctx.send(response)
 
@@ -81,9 +81,9 @@ async def kiss(ctx, *, argname=''):
     if argname == '':
         argname = ctx.author.nick
     if argname == '<@!879069038695817216>':
-        response = f"<@{ctx.author.id}> pats my head! ^w^"
+        response = f"{ctx.author.mention} pats my head! ^w^"
     else:
-        response = f"<@{ctx.author.id}> pats {argname}'s head!"
+        response = f"{ctx.author.mention} pats {argname}'s head!"
     print(f"Author: {ctx.author}, Command: pat, Response: {response}")
     await ctx.send(response)
 
@@ -93,9 +93,9 @@ async def kiss(ctx, *, argname=''):
     if argname == '':
         argname = ctx.author.nick
     if argname == '<@!879069038695817216>':
-        response = f"<@{ctx.author.id}> summons me!"
+        response = f"{ctx.author.mention} summons me!"
     else:
-        response = f"<@{ctx.author.id}> summons {argname}!"
+        response = f"{ctx.author.mention} summons {argname}!"
     print(f"Author: {ctx.author}, Command: summon, Response: {response}")
     await ctx.send(response)
 
