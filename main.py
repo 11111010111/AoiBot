@@ -100,11 +100,17 @@ async def kiss(ctx, *, argname=''):
     await ctx.send(response)
 
 
-'''@bot.command(name='avatar', help='avatar')
-async def get_avatar(ctx, member: discord.Member):
-    userid = member.id
-    response = 'id: ' + str(member.id)
-    await ctx.send(response)'''
+@bot.command()
+async def avatar(ctx, member: discord.Member = None):
+    if member is None:
+        member = ctx.author
+
+    avatar_url: discord.Asset = member.avatar_url
+
+    await ctx.send(avatar_url)  # this works because Asset.__str__ is the url
+    # Comment above and uncomment all below if you want to send the file
+    # file = discord.File(fp=await avatar_url.read())
+    # await ctx.send(file=file)
 
 
 @bot.command(name='ping', help='gets latency')
