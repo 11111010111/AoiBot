@@ -29,13 +29,13 @@ async def say(ctx, *, argname='** **'):
 
 
 @bot.command(name='hug', help='hug someone')
-async def kiss(ctx, *, argname=''):
+async def hug(ctx, *, argname=''):
     if argname == '':
         argname = ctx.author.nick
     if argname == '<@!879069038695817216>':
-        response = f"<@{ctx.author.id}> hugs me! ^w^"
+        response = f"{ctx.author.mention} hugs me! ^w^"
     else:
-        response = f"<@{ctx.author.id}> hugs {argname}!"
+        response = f"{ctx.author.mention} hugs {argname}!"
     print(f"Author: {ctx.author}, Command: hug, Response: {response}")
     await ctx.send(response)
 
@@ -45,66 +45,72 @@ async def kiss(ctx, *, argname=''):
     if argname == '':
         argname = ctx.author.nick
     if argname == '<@!879069038695817216>':
-        response = f"<@{ctx.author.id}> kisses me :flushed:"
+        response = f"{ctx.author.mention} kisses me :flushed:"
     else:
-        response = f"<@{ctx.author.id}> kisses {argname}!"
+        response = f"{ctx.author.mention} kisses {argname}!"
     print(f"Author: {ctx.author}, Command: kiss, Response: {response}")
     await ctx.send(response)
 
 
 @bot.command(name='boop', help='boop')
-async def kiss(ctx, *, argname=''):
+async def boop(ctx, *, argname=''):
     if argname == '':
         argname = ctx.author.nick
     if argname == '<@!879069038695817216>':
-        response = f"<@{ctx.author.id}> boops my snoot! >~<"
+        response = f"{ctx.author.mention} boops my snoot! >~<"
     else:
-        response = f"<@{ctx.author.id}> boops {argname}'s snoot!"
+        response = f"{ctx.author.mention} boops {argname}'s snoot!"
     print(f"Author: {ctx.author}, Command: boop, Response: {response}")
     await ctx.send(response)
 
 
 @bot.command(name='pet', help='pet someone')
-async def kiss(ctx, *, argname=''):
+async def pet(ctx, *, argname=''):
     if argname == '':
         argname = ctx.author.nick
     if argname == '<@!879069038695817216>':
-        response = f"<@{ctx.author.id}> pets me! ^w^"
+        response = f"{ctx.author.mention} pets me! ^w^"
     else:
-        response = f"<@{ctx.author.id}> pets {argname}!"
+        response = f"{ctx.author.mention} pets {argname}!"
     print(f"Author: {ctx.author}, Command: pet, Response: {response}")
     await ctx.send(response)
 
 
 @bot.command(name='pat', help='pat someone')
-async def kiss(ctx, *, argname=''):
+async def pat(ctx, *, argname=''):
     if argname == '':
         argname = ctx.author.nick
     if argname == '<@!879069038695817216>':
-        response = f"<@{ctx.author.id}> pats my head! ^w^"
+        response = f"{ctx.author.mention} pats my head! ^w^"
     else:
-        response = f"<@{ctx.author.id}> pats {argname}'s head!"
+        response = f"{ctx.author.mention} pats {argname}'s head!"
     print(f"Author: {ctx.author}, Command: pat, Response: {response}")
     await ctx.send(response)
 
 
 @bot.command(name='summon', help='summon someone')
-async def kiss(ctx, *, argname=''):
+async def summon(ctx, *, argname=''):
     if argname == '':
         argname = ctx.author.nick
     if argname == '<@!879069038695817216>':
-        response = f"<@{ctx.author.id}> summons me!"
+        response = f"{ctx.author.mention} summons me!"
     else:
-        response = f"<@{ctx.author.id}> summons {argname}!"
+        response = f"{ctx.author.mention} summons {argname}!"
     print(f"Author: {ctx.author}, Command: summon, Response: {response}")
     await ctx.send(response)
 
 
-'''@bot.command(name='avatar', help='avatar')
-async def get_avatar(ctx, member: discord.Member):
-    userid = member.id
-    response = 'id: ' + str(member.id)
-    await ctx.send(response)'''
+@bot.command(name='avatar', description='get the avatar of someone')
+async def avatar(ctx, member: discord.Member = None):
+    if member is None:
+        member = ctx.author
+
+    avatar_url: discord.Asset = member.avatar_url
+
+    await ctx.send(avatar_url)  # this works because Asset.__str__ is the url
+    # Comment above and uncomment all below if you want to send the file
+    # file = discord.File(fp=await avatar_url.read())
+    # await ctx.send(file=file)
 
 
 @bot.command(name='ping', help='gets latency')
