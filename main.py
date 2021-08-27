@@ -29,7 +29,7 @@ async def say(ctx, *, argname='** **'):
 
 
 @bot.command(name='hug', help='hug someone')
-async def kiss(ctx, *, argname=''):
+async def hug(ctx, *, argname=''):
     if argname == '':
         argname = ctx.author.nick
     if argname == '<@!879069038695817216>':
@@ -53,7 +53,7 @@ async def kiss(ctx, *, argname=''):
 
 
 @bot.command(name='boop', help='boop')
-async def kiss(ctx, *, argname=''):
+async def boop(ctx, *, argname=''):
     if argname == '':
         argname = ctx.author.nick
     if argname == '<@!879069038695817216>':
@@ -65,7 +65,7 @@ async def kiss(ctx, *, argname=''):
 
 
 @bot.command(name='pet', help='pet someone')
-async def kiss(ctx, *, argname=''):
+async def pet(ctx, *, argname=''):
     if argname == '':
         argname = ctx.author.nick
     if argname == '<@!879069038695817216>':
@@ -77,7 +77,7 @@ async def kiss(ctx, *, argname=''):
 
 
 @bot.command(name='pat', help='pat someone')
-async def kiss(ctx, *, argname=''):
+async def pat(ctx, *, argname=''):
     if argname == '':
         argname = ctx.author.nick
     if argname == '<@!879069038695817216>':
@@ -89,7 +89,7 @@ async def kiss(ctx, *, argname=''):
 
 
 @bot.command(name='summon', help='summon someone')
-async def kiss(ctx, *, argname=''):
+async def summon(ctx, *, argname=''):
     if argname == '':
         argname = ctx.author.nick
     if argname == '<@!879069038695817216>':
