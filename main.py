@@ -54,16 +54,36 @@ async def kiss(ctx, *, argname='themself'):
     await ctx.send(response)
 
 
+@bot.command(name='pat', help='well... pats')
+async def kiss(ctx, *, argname='themself'):
+    response = f'<@{ctx.author.id}> pats {argname}'
+    await ctx.send(response)
+
+
 @bot.command(name='summon', help='summon something')
 async def summon(ctx, *, argname='nothing'):
     response = f'<@{ctx.author.id}> summons {argname}'
     await ctx.send(response)
 
 
-@bot.command(name='avatar', help='avatar')
+'''@bot.command(name='avatar', help='avatar')
+async def get_avatar(ctx, member: discord.Member):
+    userid = member.id
+    response = 'id: ' + str(member.id)
+    await ctx.send(response)'''
+
+
+@bot.command(name='ping', help='gets latency')
 async def get_avatar(ctx):
-    response = ctx.author.avatar_url
+    response = 'Bot latency is: ' + str(bot.latency * 1000) + ' ms'
     await ctx.send(response)
+
+
+'''@bot.command(name='mute')
+async def mute(ctx, member: discord.Member):
+    member_id = member.id
+    role = discord.utils.get(ctx.author.roles, name='Muted')
+    await member.add_roles(role)'''
 
 
 bot.run(TOKEN)
