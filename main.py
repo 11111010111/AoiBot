@@ -12,7 +12,8 @@ bot = commands.Bot(command_prefix=':3 ')
 @bot.command(name='invite', help='gives bot invite')
 async def invite(ctx):
     response = 'the bot invite is:  ' \
-               'https://discord.com/api/oauth2/authorize?client_id=879069038695817216&permissions=8&scope=bot'
+               'https://discord.com/api/oauth2/authorize?client_id=879069038695817216' \
+               '&permissions=8&scope=bot%20applications.commands'
     await ctx.send(response)
 
 
