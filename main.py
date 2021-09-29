@@ -7,8 +7,16 @@ from dotenv import load_dotenv
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
-bot = commands.Bot(command_prefix=':3 ')
+bot = commands.Bot(command_prefix=':3 ', allowed_mentions=discord.AllowedMentions(
+        users=True,         # Whether to ping individual user @mentions
+        everyone=False,      # Whether to ping @everyone or @here mentions
+        roles=True,         # Whether to ping role @mentions
+        replied_user=False,  # Whether to ping on replies to messages
+    )
+)
 log_file = open(r"logs.txt", "w")
+
+print("we online uwu")
 
 
 @bot.command(name='invite', help='gives bot invite')
